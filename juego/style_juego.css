@@ -1,0 +1,112 @@
+.cont {
+    width: 1200px;
+    height: 900px;
+    margin: 0 auto;
+  }
+body{
+    background: url("fondo2.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    }
+.centrado{
+    text-align:center;
+}
+.inicio{
+    display: none;
+    text-align:center;
+}
+.btn{
+    width: 150px;
+    height: 50px;
+    margin-left: 75px;
+    font-size: 20px;
+    background-color: darkgoldenrod;
+    border: 2px solid  brown; 
+    margin-bottom: 4px;
+    color: white;
+}
+hr{
+    width:15% ;
+    height: 5px;
+    align:"center";
+    size:20 ;
+    background-color: black;
+}
+	
+.text-left{
+    padding: 10px; float: left; width: 45%; text-align: justify;
+}
+.text-right{
+    padding: 10px; float: right; width: 45%; text-align: justify
+}
+.resultados{
+    display: none;
+    text-align: center;
+}
+.ocultar_imagen{
+    height:50%;
+    width:50%;
+    display: none;
+    position: absolute;
+    align-content: center;
+    margin-left: 50px;
+    margin-right: 500px;
+    align-items: center;
+}
+.opcion{
+    width: 150px;
+    height: 50px;
+    margin-left: 75px;
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: tomato;
+    padding: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
+
+}
+.opcion:hover{
+    background: #434343;
+    letter-spacing: 1px;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+}
+.numeros{
+    font-size: 400% ;
+    font-style: oblique;
+}
+.puntaje{
+    display: none;
+    text-align: center;
+    color: #ff001d;
+}
+.ocultar{
+    display: none;
+}
+.nivel{
+    color: black;
+    font-style: oblique;
+}
+.imagen{
+width: 450px;
+height: 300px;
+margin-top: -300px;
+margin-left: -150px;
+left: 50%;
+top: 50%;
+position: absolute;
+}
+.centrar_final{
+    
+    width: 125px;
+    height: 50px;
+    margin-top: 400px;
+    margin-left: 300px;
+}

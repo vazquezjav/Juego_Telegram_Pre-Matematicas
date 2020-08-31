@@ -1,6 +1,54 @@
-<!DOCTYPE php>
 <html>
-    <head>
-        Hola
-    </head>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="cont">
+        <div class="center">
+            <div class="title">
+                <h1> Juego Matemáticas</h1>
+            </div>
+            <div>
+                <button class="btn" id="start" onclick="start()"> Empezar</button>
+            </div>
+
+            <div class="menu" id="operacion">
+                </br>
+                <h3> Seleccione la operación</h3>
+
+                <div>
+                    <button class="operacion" onclick="menu_operacion(1)">Suma</button>
+                </div>
+                </br>
+                <div>
+                    <button class="operacion" onclick="menu_operacion(2)">Resta</button>
+                </div>
+                </br>
+                <div>
+                    <button class="operacion" onclick="menu_operacion(3)">Multiplicación</button>
+                </div>
+                </br>
+                <div>
+                    <button class="operacion" onclick="menu_operacion(4)">División</button>
+                </div>
+            </div>
+
+            <div class="menu2" id="dificultades">
+            </br>
+                <h3>Escoja la dificultad</h3>
+                <div>
+                    <button class="dificultad" onclick="menu_dificultad(1)">Basica</button>
+                </div>
+                </br>
+                <div>
+                    <button class="dificultad" onclick="menu_dificultad(2)">Media</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>

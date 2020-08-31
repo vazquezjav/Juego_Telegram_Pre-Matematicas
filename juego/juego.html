@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style_juego.css">
+        <script src="script_juego.js"></script>
+        <audio id="sonido_fondo" src="audio_fondo.mp3" autoplay loop></audio>
+    </head>
+    <body>
+        <div class="cont">
+            <div class="centrado" > 
+                <button class="btn" id="start" onclick="valor()">Empezar</button>
+            </div>
+            &nbsp;
+            <div id="puntaje"  class="puntaje">
+                <h1 id="nivel" class="nivel">Nivel 1 de 15</h1>
+                <h1 id="puntaje_numero" > </h1>
+            </div>
+            <div class="inicio" id="inicio">
+                <img id="mal" src="incorrect.png" class="ocultar_imagen imagen"/>
+                <img id="correcto" src="correct.png" class="ocultar_imagen imagen" />
+                
+                <h1 class="numeros" id="number1">0</h1>
+                <h1 class="numeros" id="number2">1</h1>
+                <hr>
+                <h1 class="numeros" >?</h1>
+            </div>
+            
+        </br> </br>
+            <div class="resultados" id="resultados">
+                <input class="opcion" type="button" id="result" value="1" onclick="comprobar(this.id)"/>
+                <input class="opcion" type="button" id="result1" value="2" onclick="comprobar(this.id)"/>
+                <input class="opcion" type="button" id="result2" value="3" onclick="comprobar(this.id)"/>
+                <input class="opcion " type="button" id="result3" value="4" onclick="comprobar(this.id)"/>
+            </div>
+            
+            <div >
+                <audio id="sonido_correcto" src="correcto.mp3" preload="auto"></audio>
+            </div>
+            <div >
+                <audio id="sonido_incorrecto" src="sonido_incorrecto.mp3" preload="auto"></audio>
+            </div>
+            <div >
+                <img id="ganar_imagen" src="ganar.png" alt="ganar" class="ocultar_imagen imagen">
+                <img id="perder_imagen" src="perder.png" alt="ganar" class="ocultar_imagen imagen">
+                <button id="regresar" class="ocultar opcion centrar_final" onclick="regresar()"> Menu</button>
+                <button id="reintentar" class="ocultar opcion centrar_final" onclick="reintentar()"> Reintentar</button>
+            </div>
+        </div>
+        
+       
+        
+    </body>
+</html>
