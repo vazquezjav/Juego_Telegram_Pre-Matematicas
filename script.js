@@ -24,3 +24,12 @@ function menu_dificultad(tipo){
     console.log(dificultad)
     location.href ="juego/juego.html?operacion="+operacion+"&dificultad="+dificultad;
 }
+function volverOperacion(){
+    document.getElementById("dificultades").style.display="none";
+    document.getElementById("operacion").style.display="inline";
+}
+function volverInicio(){
+    document.getElementById("operacion").style.display="none";
+    document.getElementById("comenzar").style.display="inline";
+    document.getElementById("start").style.display="inline";
+}

@@ -8,10 +8,11 @@
 <body>
     <div class="cont">
         <div class="center">
-            <div class="title">
+            <div class="title" id="comenzar">
                 <h1> Juego Matemáticas</h1>
+                
             </div>
-            <div>
+            <div id="button_empezar">
                 <button class="btn" id="start" onclick="start()"> Empezar</button>
             </div>
 
@@ -34,10 +35,15 @@
                 <div>
                     <button class="operacion" onclick="menu_operacion(4)">División</button>
                 </div>
+            </br>
+        </br>
+                <div>
+                    <button class="volver" onclick="volverInicio()">Volver</button>
+                </div>
             </div>
 
             <div class="menu2" id="dificultades">
-            </br>
+                </br>
                 <h3>Escoja la dificultad</h3>
                 <div>
                     <button class="dificultad" onclick="menu_dificultad(1)">Basica</button>
@@ -46,7 +52,12 @@
                 <div>
                     <button class="dificultad" onclick="menu_dificultad(2)">Media</button>
                 </div>
+            </br>
+        </br>
+
+                <button class="volver" onclick="volverOperacion()">Volver</button>
             </div>
+
         </div>
     </div>
 </body>

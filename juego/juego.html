@@ -7,11 +7,11 @@
     <body>
         <div class="cont">
             <div class="centrado" > 
-                <button class="btn" id="start" onclick="valor()">Empezar</button>
+                <button class="big-button button2 posicion-comenzar" id="start" onclick="valor()">Empezar</button>
             </div>
             &nbsp;
             <div id="puntaje"  class="puntaje">
-                <h1 id="nivel" class="nivel">Nivel 1 de 15</h1>
+                <h1 id="nivel" class="nivel">Nivel 1 de 10</h1>
                 <h1 id="puntaje_numero" > </h1>
             </div>
             <div class="inicio" id="inicio">
@@ -25,11 +25,20 @@
             </div>
             
         </br> </br>
+        
             <div class="resultados" id="resultados">
+
+                <button class="big-button button2" id="result" value="1" onclick="comprobar(this.id)" >1 </button>
+                <button class="big-button button2" id="result1" value="1" onclick="comprobar(this.id)" >1 </button>
+                <button class="big-button button2" id="result2" value="1" onclick="comprobar(this.id)" >1 </button>
+                <button class="big-button button2" id="result3" value="1" onclick="comprobar(this.id)" >1 </button>
+
+                <!--
                 <input class="opcion" type="button" id="result" value="1" onclick="comprobar(this.id)"/>
                 <input class="opcion" type="button" id="result1" value="2" onclick="comprobar(this.id)"/>
                 <input class="opcion" type="button" id="result2" value="3" onclick="comprobar(this.id)"/>
                 <input class="opcion " type="button" id="result3" value="4" onclick="comprobar(this.id)"/>
+                -->
             </div>
             
             <div >
@@ -40,7 +49,7 @@
             </div>
             <div >
                 <img id="ganar_imagen" src="ganar.png" alt="ganar" class="ocultar_imagen imagen">
-                <img id="perder_imagen" src="perder.png" alt="ganar" class="ocultar_imagen imagen">
+                <img id="perder_imagen" src="perder2.png" alt="ganar" class="ocultar_imagen imagen">
                 <button id="regresar" class="ocultar opcion centrar_final" onclick="regresar()"> Menu</button>
                 <button id="reintentar" class="ocultar opcion centrar_final" onclick="reintentar()"> Reintentar</button>
             </div>

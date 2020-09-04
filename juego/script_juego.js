@@ -8,7 +8,7 @@ var b = 0;
 var valorResult = 0;
 var puntaje = 0;
 var puntajeMal = 0;
-var limite = 15;
+var limite = 10;
 var cont = 1;
 
 
@@ -161,6 +161,12 @@ function valorButton(resultado) {
         document.getElementById("result2").value = valorResult2
         document.getElementById("result3").value = valorResult3
 
+        document.getElementById("result").innerHTML = resultado
+        document.getElementById("result1").innerHTML = valorResult1
+        document.getElementById("result2").innerHTML = valorResult2
+        document.getElementById("result3").innerHTML = valorResult3
+
+
 
     }
     if (numberButton === 2) {
@@ -169,6 +175,11 @@ function valorButton(resultado) {
         document.getElementById("result1").value = resultado
         document.getElementById("result2").value = valorResult2
         document.getElementById("result3").value = valorResult3
+
+        document.getElementById("result").innerHTML = valorResult1
+        document.getElementById("result1").innerHTML = resultado
+        document.getElementById("result2").innerHTML = valorResult2
+        document.getElementById("result3").innerHTML = valorResult3
 
 
     }
@@ -179,6 +190,11 @@ function valorButton(resultado) {
         document.getElementById("result1").value = valorResult2
         document.getElementById("result2").value = resultado
         document.getElementById("result3").value = valorResult3
+
+        document.getElementById("result").innerHTML = valorResult1
+        document.getElementById("result1").innerHTML = valorResult2
+        document.getElementById("result2").innerHTML = resultado
+        document.getElementById("result3").innerHTML = valorResult3
     }
 
     if (numberButton === 4) {
@@ -188,12 +204,23 @@ function valorButton(resultado) {
         document.getElementById("result2").value = valorResult3
         document.getElementById("result3").value = resultado
 
+        document.getElementById("result").innerHTML = valorResult1
+        document.getElementById("result1").innerHTML = valorResult2
+        document.getElementById("result2").innerHTML = valorResult3
+        document.getElementById("result3").innerHTML = resultado
+
     }
 
 }
+function btn(){
+    var result = document.getElementById("btn");
+    console.log(result.value)
+    result.value=2;
+    document.getElementById("btn").innerHTML="kkkk";
+}
 
 async function comprobar(id) {
-
+    console.log("nivel",cont)
     var valor = document.getElementById(id).value;
 
     //var pun="Puntaje 0 de "+ puntaje;
@@ -226,10 +253,13 @@ async function comprobar(id) {
         incorrecto.style.display = "none";
 
     }
+    
+    var nivel = document.getElementById("nivel");
+    nivel.innerHTML = "Nivel: " + cont + " de " + limite;
     if (limite > puntaje || limite > puntajeMal) {
         this.valor();
     }
-    if (cont == limite) {
+    if (cont == limite+1) {
         if (puntaje > puntajeMal) {
             console.log("entra")
             this.ganar("ganar_imagen");
@@ -252,8 +282,6 @@ async function comprobar(id) {
     var puntaje_numero = document.getElementById("puntaje_numero");
     puntaje_numero.innerHTML = "Puntaje: " + check + "<br/> " + mal;
 
-    var nivel = document.getElementById("nivel");
-    nivel.innerHTML = "Nivel: " + cont + " de " + limite;
     console.log("punt ", puntaje)
 
 }
