@@ -39,6 +39,7 @@ function getParameterByName(name) {
 
 function valor() {
     puntaje = 10;
+    document.getElementById("sonido_fondo").play();
     var inicio = document.getElementById("inicio");
     var start = document.getElementById("start");
     var resultados = document.getElementById("resultados");
