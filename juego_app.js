@@ -12,13 +12,13 @@ const gameName = process.env.juegoEscrituraMate || 'juegoEscrituraMate';
 const queries = {};
 
 
-/*bot.onText(/start|game/, (msg) => bot.sendGame(msg.from.id, gameName));
+bot.onText(/matematicas/, (msg) => bot.sendGame(msg.from.id, gameName));
 bot.on("callback_query", function (query) {
     if (query.game_short_name !== gameName) {
-        bot.answerCallbackQuery(query.id, "Sorry, '" + query.game_short_name + "' is not available.");
+        bot.answerCallbackQuery(query.id, "Lo sentimos el juego,'" + query.game_short_name + "' no esta disponible.");
     } else {
         queries[query.id] = query;
-        let gameurl = "https://juego-matematicas.herokuapp.com";
+        let gameurl = "https://juego-matematicas.herokuapp.com/";
         bot.answerCallbackQuery({
             callback_query_id: query.id,
             url: gameurl
@@ -26,13 +26,14 @@ bot.on("callback_query", function (query) {
     }
 });
 bot.on("inline_query", function(iq) {
-      bot.answerInlineQuery(iq.id, [ { type: "game", id: "0", game_short_name: gameName } ] ); 
+    bot.answerInlineQuery(iq.id, [ { type: "game", id: "0", game_short_name: gameName } ] ); 
 });
 
-server.use(express.static('public'));
+server.use(express.static(path.join(__dirname, 'Public')));
 
-server.listen(port);*/
-bot.onText(/^\/start/, function(msg){
+server.listen(port);;
+
+bot.onText(/^\/prueba/, function(msg){
     console.log(msg);
     var chatId = msg.chat.id;
     var username = msg.from.username;
