@@ -57,6 +57,7 @@ function valor() {
     var puntaje = document.getElementById("puntaje");
     puntaje.style.display = "inline";
 
+    document.getElementById("nivel").innerHTML="Nivel "+cont+" de "+limite;
     if (operacion == 1) {
         if (dificultad == 1) {
             a = Math.floor(Math.random() * 10) + 1
@@ -262,10 +263,10 @@ async function comprobar(id) {
     }
     if (cont == limite+1) {
         if (puntaje > puntajeMal) {
-            console.log("entra")
+           
             this.ganar("ganar_imagen");
         } else {
-            console.log("pierde");
+            
             this.ganar("perder_imagen");
         }
     }

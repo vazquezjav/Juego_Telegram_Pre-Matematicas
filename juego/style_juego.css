@@ -4,7 +4,7 @@
     margin: 0 auto;
   }
 body{
-    background: url("fondo2.png") no-repeat center center fixed;
+    background: url("fondo3.png") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -108,10 +108,10 @@ position: absolute;
 }
 .centrar_final{
     
-    width: 125px;
-    height: 50px;
-    margin-top: 400px;
-    margin-left: 290px;
+  width: 185px;
+  height: 50px;
+  margin-top: 600px;
+  margin-left: 250px;
 }
 .comenzar{
     margin-top: -190px;
