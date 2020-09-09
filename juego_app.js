@@ -12,7 +12,7 @@ const gameName = process.env.juegoEscrituraMate || 'juegoEscrituraMate';
 const queries = {};
 
 
-bot.onText(/start|game/, (msg) => bot.sendGame(msg.from.id, gameName));
+/*bot.onText(/start|game/, (msg) => bot.sendGame(msg.from.id, gameName));
 bot.on("callback_query", function (query) {
     if (query.game_short_name !== gameName) {
         bot.answerCallbackQuery(query.id, "Sorry, '" + query.game_short_name + "' is not available.");
@@ -31,11 +31,11 @@ bot.on("inline_query", function(iq) {
 
 server.use(express.static('public'));
 
-server.listen(port);
-/*bot.onText(/^\/start/, function(msg){
+server.listen(port);*/
+bot.onText(/^\/start/, function(msg){
     console.log(msg);
     var chatId = msg.chat.id;
     var username = msg.from.username;
     
     bot.sendMessage(chatId, "Hola, " + username + " soy un bot y mi nombre es Review4IU");
-    });*/
+    });
