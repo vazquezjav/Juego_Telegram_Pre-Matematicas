@@ -11,14 +11,14 @@ const gameName = process.env.juegoEscrituraMate || 'juegoEscrituraMate';
 
 const queries = {};
 
-/*bot.onText(/help/, (msg) => bot.sendMessage(msg.from.id, "This bot implements a T-Rex jumping game. Say /game if you want to play."));
+bot.onText(/help/, (msg) => bot.sendMessage(msg.from.id, "This bot implements a T-Rex jumping game. Say /game if you want to play."));
 bot.onText(/start|game/, (msg) => bot.sendGame(msg.from.id, gameName));
 bot.on("callback_query", function (query) {
     if (query.game_short_name !== gameName) {
         bot.answerCallbackQuery(query.id, "Sorry, '" + query.game_short_name + "' is not available.");
     } else {
         queries[query.id] = query;
-        let gameurl = "https://evening-fortress-51208.herokuapp.com/";
+        let gameurl = "https://juego-matematicas.herokuapp.com";
         bot.answerCallbackQuery({
             callback_query_id: query.id,
             url: gameurl
@@ -31,11 +31,11 @@ bot.on("inline_query", function(iq) {
 
 server.use(express.static(path.join(__dirname, 'public')));
 
-server.listen(port);*/
-bot.onText(/^\/start/, function(msg){
+server.listen(port);
+/*bot.onText(/^\/start/, function(msg){
     console.log(msg);
     var chatId = msg.chat.id;
     var username = msg.from.username;
     
     bot.sendMessage(chatId, "Hola, " + username + " soy un bot y mi nombre es Review4IU");
-    });
+    });*/
