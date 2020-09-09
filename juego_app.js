@@ -29,7 +29,7 @@ bot.on("inline_query", function(iq) {
       bot.answerInlineQuery(iq.id, [ { type: "game", id: "0", game_short_name: gameName } ] ); 
 });
 
-server.use(express.static(path.join(__dirname, 'public')));
+server.use(express.static('public'));
 
 server.listen(port);
 /*bot.onText(/^\/start/, function(msg){
