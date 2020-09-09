@@ -4,7 +4,7 @@ const TelegramBot = require("node-telegram-bot-api");
 
 const TOKEN = "1144691998:AAG71sZtindjgyOAM5oMT0KkjRP4X9bfQsQ";
 const server = express();
-const bot = new TelegramBot(TOKEN, { polling: true } );
+const bot = new TelegramBot(TOKEN, { polling: true });
 
 const port = process.env.PORT || 5000;
 const gameName = process.env.juegoEscrituraMate || 'juegoEscrituraMate';
@@ -25,18 +25,26 @@ bot.on("callback_query", function (query) {
         });
     }
 });
-bot.on("inline_query", function(iq) {
-    bot.answerInlineQuery(iq.id, [ { type: "game", id: "0", game_short_name: gameName } ] ); 
+bot.on("inline_query", function (iq) {
+    bot.answerInlineQuery(iq.id, [{ type: "game", id: "0", game_short_name: gameName }]);
 });
 
 server.use(express.static(path.join(__dirname, 'Public')));
 
 server.listen(port);;
 
-bot.onText(/^\/prueba/, function(msg){
+bot.onText(/^\/prueba/, function (msg) {
     console.log(msg);
     var chatId = msg.chat.id;
     var username = msg.from.username;
-    
-    bot.sendMessage(chatId, "Hola, " + username + " soy un bot y mi nombre es Review4IU");
-    });
+
+    bot.sendMessage(chatId, "Hola, " + username + " soy un bot y mi nombre es Juego");
+});
+
+bot.on('message', function (msg) {
+    console.log(msg);
+    // msg.chat.id se encarga de recoger el id del chat donde se está realizando la petición.
+    var chatId = msg.chat.id;
+    // Enviamos nuestro mensaje indicando el id del chat. 
+    bot.sendMessage(chatId, 'Perdon, pero estoy programado solo para juegos mediante comandos \n 1. Juego Matematicas: /matematicas \n 2. Juego Escritura: /escritura');
+});
