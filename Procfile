@@ -1,1 +1,1 @@
-web: node juego_pp.js
+web: node juego_app.js

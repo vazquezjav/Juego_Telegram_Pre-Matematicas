@@ -1,0 +1,25 @@
+{
+  "name": "juego_telegram_pre-matematicas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "juego_app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "install": "^0.13.0",
+    "node-telegram-bot-api": "^0.50.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vazquezjav/Juego_Telegram_Pre-Matematicas.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vazquezjav/Juego_Telegram_Pre-Matematicas/issues"
+  },
+  "homepage": "https://github.com/vazquezjav/Juego_Telegram_Pre-Matematicas#readme"
+}
