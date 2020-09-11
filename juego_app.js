@@ -11,7 +11,7 @@ const gameName = process.env.juegoEscrituraMate || 'juegoEscrituraMate';
 const gameName1 = process.env.JuegoLectMat || 'juegoPreEscritura';
 
 const queries = {};
-bot.onText(/start|jugar/, (msg) => bot.sendMessage(msg.from.id, "Para jugar prueba con los siguientes comandos: \n 1. Juego Matematicas: /matematicas \n 2. Juego Escritura: /lectura"));
+bot.onText(/start|jugar/, (msg) => bot.sendMessage(msg.from.id, "Para jugar prueba los siguientes comandos: \n 1. Juego Matematicas: /matematicas \n 2. Juego Escritura: /lectura"));
 
 bot.onText(/matematicas/, (msg) => bot.sendGame(msg.from.id, gameName));
 bot.on("callback_query", function (query) {
@@ -48,11 +48,3 @@ server.use(express.static(path.join(__dirname, 'Public')));
 
 server.listen(port);;
 
-
-bot.on('message', function (msg) {
-    console.log(msg);
-    // msg.chat.id se encarga de recoger el id del chat donde se está realizando la petición.
-    var chatId = msg.chat.id;
-    // Enviamos nuestro mensaje indicando el id del chat. 
-    bot.sendMessage(chatId, 'Perdon, pero estoy programado solo para juegos mediante comandos \n 1. Juego Matematicas: /matematicas \n 2. Juego Escritura: /lectura');
-});
