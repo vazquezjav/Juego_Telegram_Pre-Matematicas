@@ -19,7 +19,7 @@ bot.on("callback_query", function (query) {
         bot.answerCallbackQuery(query.id, "Lo sentimos el juego,'" + query.game_short_name + "' no esta disponible.");
     } else {
         queries[query.id] = query;
-        let gameurl = "https://juego-matematicas.herokuapp.com/";
+        let gameurl = "http://34.83.242.108/matematicas/Public/";
         bot.answerCallbackQuery({
             callback_query_id: query.id,
             url: gameurl
