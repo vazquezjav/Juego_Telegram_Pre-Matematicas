@@ -8,9 +8,10 @@ const bot = new TelegramBot(TOKEN, { polling: true });
 
 const port = process.env.PORT || 5000;
 const gameName = process.env.juegoEscrituraMate || 'juegoEscrituraMate';
+const gameName1 = process.env.JuegoLectMat || 'juegoPreEscritura';
 
 const queries = {};
-
+bot.onText(/start|jugar/, (msg) => bot.sendMessage(msg.from.id, "Para jugar prueba con los siguientes comandos: \n 1. Juego Matematicas: /matematicas \n 2. Juego Escritura: /lectura"));
 
 bot.onText(/matematicas/, (msg) => bot.sendGame(msg.from.id, gameName));
 bot.on("callback_query", function (query) {
@@ -25,6 +26,20 @@ bot.on("callback_query", function (query) {
         });
     }
 });
+bot.onText(/lectura/, (msg) => bot.sendGame(msg.from.id, gameName1));
+bot.on("callback_query", function (query) {
+    if (query.game_short_name !== gameName1) {
+        bot.answerCallbackQuery(query.id, "Lo sentimos el juego, '" + query.game_short_name + "' no esta disponible.");
+    } else {
+        queries[query.id] = query;
+        let gameurl = "https://http://34.83.242.108/escritura/";
+        bot.answerCallbackQuery({
+            callback_query_id: query.id,
+            url: gameurl
+        });
+    }
+});
+
 bot.on("inline_query", function (iq) {
     bot.answerInlineQuery(iq.id, [{ type: "game", id: "0", game_short_name: gameName }]);
 });
@@ -33,18 +48,11 @@ server.use(express.static(path.join(__dirname, 'Public')));
 
 server.listen(port);;
 
-bot.onText(/^\/prueba/, function (msg) {
-    console.log(msg);
-    var chatId = msg.chat.id;
-    var username = msg.from.username;
-
-    bot.sendMessage(chatId, "Hola, " + username + " soy un bot y mi nombre es Juego");
-});
 
 bot.on('message', function (msg) {
     console.log(msg);
     // msg.chat.id se encarga de recoger el id del chat donde se está realizando la petición.
     var chatId = msg.chat.id;
     // Enviamos nuestro mensaje indicando el id del chat. 
-    bot.sendMessage(chatId, 'Perdon, pero estoy programado solo para juegos mediante comandos \n 1. Juego Matematicas: /matematicas \n 2. Juego Escritura: /escritura');
+    bot.sendMessage(chatId, 'Perdon, pero estoy programado solo para juegos mediante comandos \n 1. Juego Matematicas: /matematicas \n 2. Juego Escritura: /lectura');
 });
