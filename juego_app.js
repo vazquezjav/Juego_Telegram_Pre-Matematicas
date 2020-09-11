@@ -8,7 +8,7 @@ const bot = new TelegramBot(TOKEN, { polling: true });
 
 const port = process.env.PORT || 5000;
 const gameName = process.env.juegoEscrituraMate || 'juegoEscrituraMate';
-const gameName1 = process.env.JuegoLectMat || 'juegoPreEscritura';
+const gameName1 = process.env.juegoPreEscritura || 'juegoPreEscritura';
 
 const queries = {};
 bot.onText(/start|jugar/, (msg) => bot.sendMessage(msg.from.id, "Para jugar prueba los siguientes comandos: \n 1. Juego Matematicas: /matematicas \n 2. Juego Escritura: /lectura"));
