@@ -32,7 +32,7 @@ bot.on("callback_query", function (query) {
         bot.answerCallbackQuery(query.id, "Lo sentimos el juego, '" + query.game_short_name + "' no esta disponible.");
     } else {
         queries[query.id] = query;
-        let gameurl = "https://http://34.83.242.108/escritura/";
+        let gameurl = "http://34.83.242.108/escritura/";
         bot.answerCallbackQuery({
             callback_query_id: query.id,
             url: gameurl
