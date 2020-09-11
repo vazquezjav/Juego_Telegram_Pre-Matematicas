@@ -7,7 +7,7 @@ const server = express();
 const bot = new TelegramBot(TOKEN, { polling: true });
 
 const port = process.env.PORT || 5000;
-const gameName = process.env.juegoEscrituraMate || 'juegoEscrituraMate';
+const gameName = process.env.juegoPreMatematicas || 'juegoPreMatematicas';
 const gameName1 = process.env.juegoPreEscritura || 'juegoPreEscritura';
 
 const queries = {};
