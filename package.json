@@ -6,7 +6,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "install": "^0.13.0",
-    "node-telegram-bot-api": "^0.50.0"
+    "node-telegram-bot-api": "^0.64.0"
   },
   "devDependencies": {},
   "scripts": {
